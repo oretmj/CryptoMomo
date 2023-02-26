@@ -1,0 +1,9 @@
+# CryptoMomo
+
+Se aplicó la arquitectura MVVM para el desarrollo de la aplicación, tratando de mantener la separación de responsabilidades entre las capas de la aplicación y el uso de dependency injection para mantener limpieza y mantenibilidad del código, permitiendo una fácil testeabliliadad de los componentes en el futuro.
+
+La app muestra una lista de 10 criptomonedas, con su respectivo precio en CLP ordenadas por su capitalización de mercado. Al bajar la lista se realiza una nueva petición a la API para obtener nuevamente la información de estas 10 criptomonedas actualizando sus precios.
+Se podría mejorar la app para que al bajar la lista se vayan agregando nuevas criptomonedas a la lista utilizando paginación, lo cual hubiera sido posible gracias a la API que se usa, la cual es coingecko, a la cual se le pide en esta app la primera página de 10 elementos, pero esta API permite pedir la siguiente página de 10 elementos, y asi sucesivamente. Elegí dicha API ya que ya la había utilizado anteriormente y no requiere de autenticación para poder usarla, pudiendo testear el llamado con Postman antes de implementarlo en la app.
+También se podría agregar más información o gráficos que muestren la evolución de los precios de las criptomonedas, los cuales se muestren al oprimir una criptomoneda en específico, pero todo esto dependería de las preferencias del cliente.
+
+Dentro de los posibles bugs diría que podrían haber problemas con el manejo de nulos en la app, ya que quizá no se manejen todos los casos posibles, pero esto se puede solucionar con el tiempo o con un testeo automatizado de los componentes que prueben todos los casos posibles.

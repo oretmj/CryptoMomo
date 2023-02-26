@@ -2,6 +2,7 @@ package com.example.cryptomomo.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import android.widget.ListView
 import androidx.activity.viewModels
@@ -36,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         })
 
         refreshApp()
+
+        cryptoViewModel.getCryptos()
     }
 
     private fun refreshApp() {
@@ -46,3 +49,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
